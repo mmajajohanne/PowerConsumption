@@ -5,7 +5,7 @@ import datetime
 now = datetime.datetime.now()
 from urllib.parse import urlparse, urlunparse
 
-u = urlparse('https://www.hvakosterstrommen.no/api/v1/prices/2023/01-05_NO1.json')
+u = urlparse('https://www.hvakosterstrommen.no/api/v1/prices/2023/01-05_NO1.json') #https://www.hvakosterstrommen.no/strompris-api
 u._replace(path="/api/v1/prices/"+str(now.year)+"/"+str(now.month)+"-"+str(now.day)+"_NO1.json")
 url = urlunparse(u)
 
